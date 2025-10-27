@@ -1,0 +1,100 @@
+/* .menu {
+  width: 100%; 
+  min-height: calc(100vh - 20px); 
+  background-color: #f9f9fa;
+  border-right: 1px solid #ddd;
+  padding: 20px 10px; 
+   box-sizing: border-box; 
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu li:hover {
+  background-color: #757575;
+  color: white;
+}
+
+.menu-icon {
+  font-size: 18px;
+} */
+
+
+/* Container styling */
+.menu {
+  width: 250px; /* Fixed width for a sidebar look */
+  min-height: calc(100vh - 20px);
+  background-color: #ffffff; /* Light background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease;
+  border: 1px solid rgb(207, 207, 207);
+  position: fixed;
+  top: 78px;
+  left: 1px;
+}
+
+/* Remove default list styles */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for each menu item */
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between icon and text */
+  padding: 12px 20px;
+  margin: 0 0 10px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 1.2em;
+}
+
+/* Hover effects for menu items */
+.menu li:hover {
+  background-color: #e0f7fa; /* Light cyan background */
+  color: #001679; /* Darker text on hover */
+  transform: translateX(3px);
+}
+
+/* Style for icons to match size and spacing */
+.menu-icon {
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+/* Optional: change icon color on hover for extra flair */
+.menu li:hover .menu-icon {
+  color: #000c79;
+}
+.menu a{
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (max-width:768px) {
+  .menu{
+    display: none;
+  }
+}

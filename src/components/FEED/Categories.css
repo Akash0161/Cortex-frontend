@@ -1,0 +1,93 @@
+/* container */
+.categories {
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  height: calc(100vh - 78px);
+  width: 280px;
+  position: fixed;
+  top: 78px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  gap: 12px;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+/* header */
+.sugg {
+  background-color: #022f5f;
+  border-radius: 12px;
+  color: white;
+  padding: 14px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+  text-align: center;
+}
+.sugg .suggest {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* list wrapper */
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* item */
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.18s ease, transform 0.12s ease, box-shadow 0.12s;
+  user-select: none;
+  background: transparent;
+  outline: none;
+}
+
+/* icon */
+.category-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* name */
+.category-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* hover */
+.category-item:hover {
+  background-color: #eef3f7;
+  transform: translateX(4px);
+  box-shadow: 0 4px 10px rgba(2,47,95,0.06);
+}
+
+/* active / selected */
+.category-item.active {
+  background: linear-gradient(90deg, rgba(2,47,95,0.08), rgba(2,47,95,0.03));
+  border: 1px solid rgba(2,47,95,0.12);
+  transform: translateX(0);
+  box-shadow: 0 6px 18px rgba(2,47,95,0.06);
+}
+.category-item.active .category-name {
+  color: #022f5f;
+}
+
+/* mobile: hide sidebar or move to bottom if needed */
+@media only screen and (max-width: 1200px) {
+  .categories {
+    display: none;
+  }
+}

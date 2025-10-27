@@ -1,0 +1,50 @@
+.SavedPage h1{
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.SavedPage{
+    margin-top: 100px;
+}
+.SavedPage p{
+    color: grey;
+    text-align: center;
+    letter-spacing: 2px;
+    
+}
+.SavedPage .blog-card{
+    margin: 20px auto;
+}
+
+.SavedPage .blog-text{
+    position: relative;
+    /* right: 285px; */
+    text-align: left;
+    padding: 10px;
+}
+
+.saved-illustration{
+    width: 1400px;
+    height: 600px;
+    border:1px solid rgb(15, 5, 99);
+    border-radius: 10px;
+    margin:0 auto ;
+}
+
+@media only screen and (max-width: 768px) {
+    .saved-illustration{
+        width: 350px;
+        height: 300px;
+    }
+    .SavedPage .blog-text{
+        position: relative;
+        text-align: left;
+        margin-top: 20px;
+    }
+}
+
+#blg{
+    border: 1px solid gray;
+    margin-bottom: 50px;
+    padding: 20px;
+}

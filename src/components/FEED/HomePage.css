@@ -1,0 +1,27 @@
+.home-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.content-layout {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.content-layout > .menu {
+  flex: 0 0 20%; /* Left menu takes 20% */
+  
+  margin-top: 2px;
+}
+
+.content-layout > .blog {
+  flex: 1; /* BlogPage takes remaining 80% */
+  padding: 20px;
+}
+
+.content-layout > .categories{
+  width: 25%;
+}

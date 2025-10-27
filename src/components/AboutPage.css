@@ -1,0 +1,90 @@
+/* AboutPage.css */
+
+/* Overall page layout */
+.AboutPage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  gap: 50px;
+}
+
+/* Image container */
+.about-img {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.abt-img {
+  width: 450px;
+  height: auto;
+  border-radius: 15px;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); */
+  transition: transform 0.3s ease;
+}
+
+/* .abt-img:hover {
+  transform: scale(1.05);
+} */
+
+/* Content container */
+.About-content {
+  flex: 2 1 400px;
+  max-width: 700px;
+  margin-top: 50px;
+}
+
+.About-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.About-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #555;
+  font-weight: 400;
+}
+
+.About-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .AboutPage {
+    flex-direction: column;
+    padding: 40px 15px;
+  }
+
+  .abt-img {
+    width: 250px;
+  }
+
+  .About-content h2 {
+    font-size: 2rem;
+  }
+
+  .About-content h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .abt-img {
+    width: 350px;
+  }
+
+  .About-content p {
+    font-size: 0.95rem;
+  }
+}
