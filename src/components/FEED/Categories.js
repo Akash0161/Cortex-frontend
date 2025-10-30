@@ -8,8 +8,6 @@ import movie from '../assets/movie-emoji.webp'
 import book from '../assets/book-emoji.webp'
 
 
-
-
 const Categories = ({
   selectedCategory,
   setSelectedCategory,
@@ -27,6 +25,7 @@ const [loading, setLoading] = useState(false);
     setSelectedCategory(category);
   }
 
+
   const handleSearch = async () => {
     try {
       if (!selectedCategory?.trim()) {
@@ -35,7 +34,7 @@ const [loading, setLoading] = useState(false);
       }
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:3000/blog/search?query=${selectedCategory}`
+        `https://cortex-backend-4h9k.onrender.com/blog/search?query=${selectedCategory}`
       );
       setSearchResults?.(res.data.blogs);
     } catch (err) {

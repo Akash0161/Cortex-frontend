@@ -31,7 +31,7 @@ const Navbar = ({
         return;
       }
       const res = await axios.get(
-        `http://localhost:3000/blog/search?query=${searchQuery}`
+        `https://cortex-backend-4h9k.onrender.com/blog/search?query=${searchQuery}`
       );
       setSearchResults?.(res.data.blogs);
       console.log(res.data.blogs);

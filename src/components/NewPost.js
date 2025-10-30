@@ -51,7 +51,7 @@ const NewPost = () => {
       imageData.append('image', file);
 
       const imageUploadResponse = await axios.post(
-        'http://localhost:3000/blog/imageupload',
+        'https://cortex-backend-4h9k.onrender.com/blog/imageupload',
         imageData,
         { headers: { 'Content-Type': 'multipart/form-data' } }
       );
@@ -73,7 +73,7 @@ const NewPost = () => {
       };
 
       const blogResponse = await axios.post(
-        'http://localhost:3000/blog/newpost',
+        'https://cortex-backend-4h9k.onrender.com/blog/newpost',
         blogData
       );
 

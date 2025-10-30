@@ -28,7 +28,7 @@ const Profile = () => {
   // Fetch user details + blogs
   const fetchUser = async () => {
   try {
-    const res = await axios.get(`http://localhost:3000/user/getUserByIdSimple/${userId}`);
+    const res = await axios.get(`https://cortex-backend-4h9k.onrender.com/user/getUserByIdSimple/${userId}`);
     setUserData(res.data.user || {});
     setNewDescription(res.data.user?.description || "");
   } catch (err) {
@@ -38,7 +38,7 @@ const Profile = () => {
 
   const profileBlogs = async () => {
     try {
-      const res = await axios.post("http://localhost:3000/blog/user", { userId });
+      const res = await axios.post("https://cortex-backend-4h9k.onrender.com/blog/user", { userId });
       setUserBlogs(res.data.blogs || []);
     } catch (err) {
       console.log(err.message);
@@ -55,10 +55,10 @@ const Profile = () => {
     try {
       const idStr = String(blogId);
       if (savedBlogsIds.includes(idStr)) {
-        await axios.post("http://localhost:3000/user/removesavedblog", { userId, blogId: idStr });
+        await axios.post("https://cortex-backend-4h9k.onrender.com/user/removesavedblog", { userId, blogId: idStr });
         setSavedBlogsIds(prev => prev.filter(id => id !== idStr));
       } else {
-        await axios.post("http://localhost:3000/user/saved", { userId, blogId: idStr });
+        await axios.post("https://cortex-backend-4h9k.onrender.com/user/saved", { userId, blogId: idStr });
         setSavedBlogsIds(prev => [...prev, idStr]);
       }
     } catch (err) {
@@ -69,7 +69,7 @@ const Profile = () => {
   // Update user description
  const handleDescriptionSave = async () => {
   try {
-    const res = await axios.post("http://localhost:3000/user/updateDescription", {
+    const res = await axios.post("https://cortex-backend-4h9k.onrender.com/user/updateDescription", {
       userId,
       description: newDescription
     });
@@ -200,7 +200,7 @@ const Profile = () => {
                   </div>
                 </Card.Body>
 
-                <Card.Img variant="top" className="blog-img" src={`http://localhost:3000/${blog.image}`} />
+                <Card.Img variant="top" className="blog-img" src={`https://cortex-backend-4h9k.onrender.com/${blog.image}`} />
 
                 <Card.Body className='Blog-content'>
                   <Card.Title className="blog-title">{blog.Title}</Card.Title>

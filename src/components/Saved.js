@@ -21,7 +21,7 @@ const [searchResults, setSearchResults] = useState(null); // filtered blogs
 
   const fetchSavedBlogs = async () => {
     try {
-     const res = await axios.get(`http://localhost:3000/user/getbyid/${userId}`);
+     const res = await axios.get(`https://cortex-backend-4h9k.onrender.com/user/getbyid/${userId}`);
      console.log(res.data.blogs) 
      setSavedBlogs(res.data.blogs);
         setSavedBlogsIds(() => res.data.blogs.map(i => i._id))
@@ -32,7 +32,7 @@ const [searchResults, setSearchResults] = useState(null); // filtered blogs
 
   const handleUnsave = async (blogId) => {
     try {
-      await axios.post("http://localhost:3000/user/removesavedblog", {
+      await axios.post("https://cortex-backend-4h9k.onrender.com/user/removesavedblog", {
         userId: userId,
         blogId: blogId,
       });
@@ -117,7 +117,7 @@ const handleSearch = () => {
               </div>
             </Card.Body>
         
-            <Card.Img variant="top" className="blog-img" src={`http://localhost:3000/${blog.image}`} />
+            <Card.Img variant="top" className="blog-img" src={`https://cortex-backend-4h9k.onrender.com/${blog.image}`} />
         
             <Card.Body className='Blog-content'>
               <Card.Title className="blog-title">

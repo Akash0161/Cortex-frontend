@@ -33,7 +33,7 @@ const SignInSignUp = () => {
       email : Email,
     }
     try{
-      const response = await axios.post('http://localhost:3000/user/usersignup',Signupdata)
+      const response = await axios.post('https://cortex-backend-4h9k.onrender.com/user/usersignup',Signupdata)
       console.log(response.data);
       
       alert(response.data.Message)
@@ -71,7 +71,7 @@ const SignInSignUp = () => {
           }
           try{
             
-            const res = await axios.post("http://localhost:3000/user/userlogin",Logindata)
+            const res = await axios.post("https://cortex-backend-4h9k.onrender.com/user/userlogin",Logindata)
             console.log(res);
             
             if(res.data.Status== true){

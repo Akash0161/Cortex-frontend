@@ -21,10 +21,10 @@ const BlogPage = ({ searchQuery, searchResults, setSearchResults }) => {
   const handleSave = async (blogId) => {
     try {
       if (savedBlogs.includes(blogId)) {
-        await axios.post("http://localhost:3000/user/removesavedblog", { userId, blogId });
+        await axios.post("https://cortex-backend-4h9k.onrender.com/user/removesavedblog", { userId, blogId });
         setSavedBlogs(prev => prev.filter(id => id !== blogId));
       } else {
-        await axios.post("http://localhost:3000/user/saved", { userId, blogId });
+        await axios.post("https://cortex-backend-4h9k.onrender.com/user/saved", { userId, blogId });
         setSavedBlogs(prev => [...prev, blogId]);
       }
     } catch (err) {
@@ -34,7 +34,7 @@ const BlogPage = ({ searchQuery, searchResults, setSearchResults }) => {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/blog/postgetall");
+      const res = await axios.get("https://cortex-backend-4h9k.onrender.com/blog/postgetall");
       setAllblog(res.data.blog);
       console.log(res.data.blog)
       console.log("Fetched blogs:", res.data.blog.map(b => ({
@@ -47,7 +47,7 @@ const BlogPage = ({ searchQuery, searchResults, setSearchResults }) => {
   };
 
   const bookmark = () => {
-    axios.get(`http://localhost:3000/user/getbyid/${userId}`)
+    axios.get(`https://cortex-backend-4h9k.onrender.com/user/getbyid/${userId}`)
       .then(res => setSavedBlogs(res.data.blogs.map(i => i._id)))
       .catch(err => console.log(err.message));
   };
