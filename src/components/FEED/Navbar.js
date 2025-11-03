@@ -10,7 +10,7 @@ const Navbar = ({
   searchQuery,
   setSearchQuery,
   setSearchResults,
-  showSearch = true, // 🔹 controls visibility of search bar
+  showSearch = true, // controls visibility of search bar
 }) => {
   const [show, setShow] = React.useState(false);
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ const Navbar = ({
   const handleSearch = async () => {
     try {
       if (!searchQuery?.trim()) {
-        setSearchResults?.(null); // avoid crash if function not passed
+        setSearchResults?.(null); 
         return;
       }
       const res = await axios.get(
@@ -56,7 +56,6 @@ const Navbar = ({
           </button>
         </Link>
 
-        {/* ✅ Search bar is shown only when showSearch = true */}
         {showSearch && (
           <div className="search-container">
             <input
@@ -111,8 +110,7 @@ const Navbar = ({
               <Link to="/Aboutpage" onClick={handleClose} style={{color:"white"}}>
                 About
               </Link>
-            </li>
-            
+            </li>   
           </ul>
         </Offcanvas.Body>
       </Offcanvas>

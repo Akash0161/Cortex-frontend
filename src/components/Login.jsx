@@ -1,5 +1,4 @@
 import React, {useState } from "react";
-import { CiFacebook } from "react-icons/ci";
 import { FcGoogle } from "react-icons/fc";
 import log from "../components/assets/log.svg";
 import register from '../components/assets/register.svg'

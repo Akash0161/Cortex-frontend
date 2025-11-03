@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import SignInSignUp from './components/Login';
 import HomePage from './components/FEED/HomePage';
@@ -10,17 +10,16 @@ import Saved from './components/Saved';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
-          <Route path="/" element={<SignInSignUp />}></Route>
-          <Route path="/Home" element={<HomePage />}></Route>
-          <Route path="/Profile" element={<Profile />}></Route>
-          <Route path="/Newpost" element={<NewPost />}></Route>
-          <Route path="/Aboutpage" element={<AboutPage />}></Route>
-          <Route path="/Saved" element={<Saved />}></Route>
+          <Route path="/" element={<SignInSignUp />} />
+          <Route path="/Home" element={<HomePage />} />
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Newpost" element={<NewPost />} />
+          <Route path="/Aboutpage" element={<AboutPage />} />
+          <Route path="/Saved" element={<Saved />} />
         </Routes>
-      </BrowserRouter>
-        
+      </HashRouter>
     </div>
   );
 }

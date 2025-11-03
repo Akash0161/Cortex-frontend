@@ -137,8 +137,6 @@ const handleSearch = () => {
                 </span>
               </Card.Text>
             </Card.Body>
-         
-           
           </section>
   
         ))}

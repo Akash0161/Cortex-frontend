@@ -5,8 +5,6 @@ import travel from '../assets/travel-emoji.png'
 import tech from '../assets/tech-emoji.png'
 import food from '../assets/food-emoji.png'
 import movie from '../assets/movie-emoji.webp'
-import book from '../assets/book-emoji.webp'
-
 
 const Categories = ({
   selectedCategory,

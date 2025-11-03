@@ -21,8 +21,6 @@ const Profile = () => {
   const [newDescription, setNewDescription] = useState("");
 
 
-
-
   const userId = localStorage.getItem('user_id');
 
   // Fetch user details + blogs

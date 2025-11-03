@@ -57,7 +57,6 @@ const BlogPage = ({ searchQuery, searchResults, setSearchResults }) => {
     fetchPosts();
   }, []);
 
-  
   const blogsToDisplay = searchResults ?? Allblog;
 
   return (
@@ -83,7 +82,7 @@ const BlogPage = ({ searchQuery, searchResults, setSearchResults }) => {
                         alt="profile"
                       />
 
-            </div>  
+                          </div>  
               <div>
                 <h6 className="author-name">{blog.userId?.name || blog.author?.name}</h6>
                 <p className="post-date">
