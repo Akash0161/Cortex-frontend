@@ -97,7 +97,7 @@ const BlogPage = ({ searchQuery, searchResults, setSearchResults }) => {
             </div>
           </Card.Body>
 
-            <Card.Img variant="top" className="blog-img" src={`http://localhost:3000/${blog.image}`} />
+            <Card.Img variant="top" className="blog-img" src={`https://cortex-backend-4h9k.onrender.com/${blog.image}`} />
 
             <Card.Body className='Blog-content'>
               <Card.Title className="blog-title">{blog.Title}</Card.Title>
