@@ -97,6 +97,11 @@ const Navbar = ({
               </Link>
             </li>
             <li>
+              <Link to="/Newpost" onClick={handleClose} style={{color:"white"}}>
+                New Post
+              </Link>
+            </li>
+            <li>
               <Link to="/Profile" onClick={handleClose} style={{color:"white"}}>
                 Profile
               </Link>
