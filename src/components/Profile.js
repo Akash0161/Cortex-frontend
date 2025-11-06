@@ -5,6 +5,7 @@ import axios from 'axios';
 import male from './assets/male.png';
 import Card from 'react-bootstrap/Card';
 import female from './assets/female.png';
+import { FaTrash } from "react-icons/fa";
 import { FaRegBookmark, FaBookmark, FaEdit } from "react-icons/fa";
 
 
@@ -63,6 +64,21 @@ const Profile = () => {
       console.log(err.message);
     }
   };
+
+  const handleDelete = async (blogId) => {
+  const confirmDelete = window.confirm("Are you sure you want to delete this blog?");
+  if (!confirmDelete) return;
+
+  try {
+    await axios.post("https://cortex-backend-4h9k.onrender.com/blog/remove", { id: blogId });
+    setUserBlogs((prevBlogs) => prevBlogs.filter((blog) => blog._id !== blogId));
+    alert("Blog deleted successfully!");
+  } catch (err) {
+    console.error("Error deleting blog:", err.message);
+    alert("Failed to delete blog. Please try again.");
+  }
+};
+
 
   // Update user description
  const handleDescriptionSave = async () => {
@@ -193,9 +209,15 @@ const Profile = () => {
                       <p className="post-date">{new Date(blog.createdAt).toLocaleDateString()}</p>
                     </div>
                   </div>
-                  <div className="header-icons" onClick={() => handleSave(blog._id)}>
-                    {savedBlogsIds.includes(String(blog._id)) ? <FaBookmark /> : <FaRegBookmark />}
+                  <div className="header-icons-container">
+                    <div className="header-icons" onClick={() => handleSave(blog._id)}>
+                      {savedBlogsIds.includes(String(blog._id)) ? <FaBookmark /> : <FaRegBookmark />}
+                    </div>
+                    <div className="delete-icon" onClick={() => handleDelete(blog._id)}>
+                      <FaTrash />
+                    </div>
                   </div>
+
                 </Card.Body>
 
                 <Card.Img variant="top" className="blog-img" src={`https://cortex-backend-4h9k.onrender.com/${blog.image}`} />

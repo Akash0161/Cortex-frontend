@@ -173,6 +173,24 @@
   margin-left: 350px;
 }
 
+.header-icons-container {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.delete-icon {
+  color: red;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.delete-icon:hover {
+  transform: scale(1.1);
+  color: darkred;
+}
+
+
 /* For large screens (default styles) */
 
 /* For screens 1200px and below */
