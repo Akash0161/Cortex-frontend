@@ -69,7 +69,7 @@ form.sign-in-form {
 .input-field {
   max-width: 380px;
   width: 100%;
-  background-color: #f0f0f0;
+  background-color: #d8d7df;
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
@@ -82,7 +82,7 @@ form.sign-in-form {
 .input-field i {
   text-align: center;
   line-height: 55px;
-  color: #acacac;
+  color: #ffffff;
   transition: 0.5s;
   font-size: 1.1rem;
 }

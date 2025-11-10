@@ -133,15 +133,17 @@ const SignInSignUp = () => {
 
             <button type="submit"  className="btn solid" >Login</button> {/* Login redirct to feed page */ }
             
-            <p className="social-text">Or Sign in with social platforms</p>
+             <p className="social-text"><span style={{color:"darkblue",fontSize:"20px",fontWeight:"bold"}}>Cortex</span> 💨 Where stories rest, and ideas awaken.</p>
 
+            {/* <p className="social-text">Or Sign in with social platforms</p>
+            
             <div className="social-media">
              
               <button onClick={handleGoogleSignup} className="social-icon">
                 <i><FcGoogle className="fb"/></i>Sign in with Google
               </button>
              
-            </div>
+            </div> */}
           </form>
 
 
@@ -149,6 +151,7 @@ const SignInSignUp = () => {
           {/* Sign Up Form */}
           <form  className="sign-up-form" onSubmit={handleSignsup}>
             {/* onClick={handleSubmbit} */}
+           
             <h2 className="title">Sign up</h2>
 
 
@@ -162,7 +165,7 @@ const SignInSignUp = () => {
               <input type="email" placeholder="Email" required value={Email} onChange={(e)=> setEmail(e.target.value)}/>
             </div>
 
-        <div className="input-field gender-input">
+        <div className="input-field gender-input" style={{backgroundColor: "#d8d7df"}}>
               <i className="fas fa-venus-mars"></i>
               <div className="gender-group">
                 <label>
@@ -209,16 +212,17 @@ const SignInSignUp = () => {
 
             <button type="submit" className="btn">Sign up</button> {/* todo: redirect to signinpage */ }
 
-            <p className="social-text">Or Sign up with social platforms</p>
+            {/* <p className="social-text">Or Sign up with social platforms</p> */}
+            <p className="social-text"><span style={{color:"darkblue",fontSize:"20px",fontWeight:"bold"}}>Cortex</span> 💨 Where stories rest, and ideas awaken.</p>
 
 
-          <div className="social-media">
+          {/* <div className="social-media">
 
               <button onClick={handleGoogleSignup} className="social-icon">
                 <i><FcGoogle className="fb"/></i>Sign in with Google
               </button>
              
-            </div>
+            </div> */}
           </form>
         </div>
       </div>

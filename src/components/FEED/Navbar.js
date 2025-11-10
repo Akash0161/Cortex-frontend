@@ -87,8 +87,7 @@ const Navbar = ({
       </div>
 
       <Offcanvas show={show} onHide={handleShow} placement="end" className="m11">
-        <Offcanvas.Header closeButton>
-        </Offcanvas.Header>
+        
         <Offcanvas.Body>
           <ul className="offcanvas-menu">
             <li>
